@@ -18,12 +18,15 @@ console.log (queryURL)
         console.log(response);
         console.log(response.data[0].images.fixed_height.url)
         var newImage = $("<img>")
-        newImage.attr("src",response.data[0].images.fixed_height.url)
-        $(".searchResults").append(newImage)
+        var i =0 
+        for (i = 0; i < newImage.length; i++)
+        {
+            newImage.attr("src",response.data[0,1,3,4,5,6,7,8,9].images.fixed_height.url)
+            $(".searchResults").append(newImage)
+        }
         console.log(newImage)
-
     })
+     
 })
 
-// still and animated
-// data still attr and data animate attr, and data status attr
+// still and animated (toggle between each)
